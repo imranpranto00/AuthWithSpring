@@ -34,6 +34,7 @@ public class AuthenticationController {
         return ResponseEntity.ok(authService.authenticate(request));
     }
 
+    @SuppressWarnings("rawtypes")
     @PostMapping("/refresh_token")
     public ResponseEntity refreshToken(
             HttpServletRequest request,
